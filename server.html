@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="マインクラフトコミュニティ公式サーバーの情報。Java版・統合版両対応！">
+    <meta name="keywords" content="マインクラフト,Minecraft,サーバー,マルチプレイ">
+    
+    <!-- OGP -->
+    <meta property="og:title" content="サーバー情報 - Minecraft/マイクラコミュニティ">
+    <meta property="og:description" content="コミュニティ公式サーバーで一緒に遊ぼう！">
+    <meta property="og:type" content="website">
+    
+    <title>サーバー情報 - Minecraft/マイクラコミュニティ</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <div class="header__logo-icon">🎮</div>
+                <span>マイクラコミュニティ</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="events.html" class="nav__link">イベント</a></li>
+                    <li class="nav__item"><a href="rules.html" class="nav__link">ルール</a></li>
+                    <li class="nav__item"><a href="join.html" class="nav__link">参加方法</a></li>
+                    <li class="nav__item"><a href="server.html" class="nav__link active">サーバー</a></li>
+                    <li class="nav__item"><a href="staff.html" class="nav__link">スタッフ</a></li>
+                    <li class="nav__item"><a href="sns.html" class="nav__link">SNS</a></li>
+                </ul>
+            </nav>
+            
+            <button class="header__menu-toggle" aria-label="メニューを開く">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- サーバー情報セクション -->
+    <section class="section section--dark" style="margin-top: 80px;">
+        <div class="section__container">
+            <header class="section__header scroll-reveal">
+                <h2 class="section__title">マイクラサーバー情報</h2>
+                <p class="section__subtitle">コミュニティ公式サーバーで一緒に遊ぼう！</p>
+            </header>
+            
+            <div class="section__content scroll-reveal">
+                <div class="grid grid-2">
+                    <!-- Java版 -->
+                    <div class="card card--server hover-lift">
+                        <span class="card__label">Java版</span>
+                        <h3 class="card__title">Java Edition</h3>
+                        <p class="card__description">
+                            <strong>対応バージョン:</strong> 1.7 - 最新<br>
+                            <strong>サーバーアドレス:</strong>
+                        </p>
+                        <div class="card__address">
+                            <span class="card__address-text">localhost</span>
+                            <button class="card__copy-btn">
+                                <i class="fas fa-copy"></i> コピー
+                            </button>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">
+                            <i class="fas fa-info-circle"></i> 正式なアドレスは後日公開予定
+                        </p>
+                    </div>
+                    
+                    <!-- 統合版 -->
+                    <div class="card card--server hover-lift">
+                        <span class="card__label">統合版</span>
+                        <h3 class="card__title">Bedrock Edition</h3>
+                        <p class="card__description">
+                            <strong>対応バージョン:</strong> 最新
+                        </p>
+                        
+                        <!-- 参加方法1: サーバーアドレス -->
+                        <div style="margin-top: 1rem;">
+                            <p style="margin-bottom: 0.5rem;"><strong>📡 サーバーアドレスで参加</strong></p>
+                            
+                            <!-- サーバーIP -->
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">サーバーIP:</p>
+                            <div class="card__address">
+                                <span class="card__address-text">localhost</span>
+                                <button class="card__copy-btn">
+                                    <i class="fas fa-copy"></i> コピー
+                                </button>
+                            </div>
+                            
+                            <!-- ポート -->
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.75rem; margin-bottom: 0.25rem;">ポート:</p>
+                            <div class="card__address">
+                                <span class="card__address-text">19132</span>
+                                <button class="card__copy-btn">
+                                    <i class="fas fa-copy"></i> コピー
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 参加方法2: フレンド登録 -->
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <p style="margin-bottom: 0.5rem;"><strong>👥 フレンド登録で参加</strong></p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem;">
+                                以下のユーザーにフレンド申請を送信してください：
+                            </p>
+                            <div class="card__address">
+                                <span class="card__address-text">maikuraoc</span>
+                                <button class="card__copy-btn">
+                                    <i class="fas fa-copy"></i> コピー
+                                </button>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;">
+                                <i class="fas fa-lightbulb"></i> フレンド承認後、フレンド一覧からサーバーに参加できます
+                            </p>
+                        </div>
+                        
+                        <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">
+                            <i class="fas fa-info-circle"></i> 正式なアドレスは後日公開予定
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- サーバールール -->
+                <div class="card" style="margin-top: 2rem;">
+                    <h3 class="card__title"><i class="fas fa-shield-alt" style="color: var(--primary-green);"></i> サーバールール</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2.2;">
+                        <li><i class="fas fa-check" style="color: var(--primary-green);"></i> 荒らし行為、窃盗、他人を不快にする行為は禁止です</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-green);"></i> PvPは禁止です（というかできないはず）</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-green);"></i> バグ、仕様の悪用は禁止です（バグあったら教えてください）</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-green);"></i> カーペット無限増殖など、無限増殖系のバグの使用も禁止です</li>
+                        <li><i class="fas fa-check" style="color: var(--primary-green);"></i> チートクライアント、チート系Modは禁止です（Xray系テクスチャも禁止です）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Minecraft/マイクラコミュニティ</h3>
+                    <p>マインクラフトの雑談を楽しむコミュニティ。<br>オープンチャット・Discord・サーバー運営で一緒に遊ぼう！</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">リンク</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="events.html">イベント</a></li>
+                        <li><a href="rules.html">ルール</a></li>
+                        <li><a href="join.html">参加方法</a></li>
+                        <li><a href="server.html">サーバー情報</a></li>
+                        <li><a href="staff.html">スタッフ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">SNS</h3>
+                    <ul class="footer__links">
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter (X)</a></li>
+                        <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="#"><i class="fab fa-line"></i> オープンチャット</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2026 Minecraft/マイクラ(オープンチャット/Discord). All rights reserved.
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">
+                    Minecraft is a trademark of Mojang AB. このサイトはMojang、Microsoft、またはそれらの関連会社によって承認されていません。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
