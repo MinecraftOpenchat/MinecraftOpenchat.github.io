@@ -1,0 +1,95 @@
+/* ==========================================================================
+   セクション共通スタイル
+   ========================================================================== */
+
+.section {
+  padding: var(--spacing-xl) var(--spacing-sm);
+  position: relative;
+}
+
+.section--dark {
+  background: var(--bg-darker);
+}
+
+.section--light {
+  background: var(--bg-dark);
+}
+
+.section--gradient {
+  background: var(--gradient-dark);
+  position: relative;
+}
+
+.section--gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-overlay);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.section__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  line-height: 1.8;
+}
+
+.section__content {
+  margin-top: var(--spacing-md);
+}
+
+/* Scroll reveal animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+}

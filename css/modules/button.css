@@ -1,0 +1,171 @@
+/* ==========================================================================
+   ボタンスタイル
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Primary Button */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--text-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-green);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn--secondary {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.btn--secondary:hover {
+  background: var(--primary-green);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outline Button */
+.btn--outline {
+  background: transparent;
+  color: var(--text-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+/* Large Button */
+.btn--lg {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* Small Button */
+.btn--sm {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Icon Button */
+.btn--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn--icon i,
+.btn--icon svg {
+  font-size: 1.25rem;
+}
+
+/* Social Buttons */
+.btn--discord {
+  background: #5865f2;
+  color: var(--text-white);
+}
+
+.btn--discord:hover {
+  background: #4752c4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(88, 101, 242, 0.3);
+}
+
+.btn--youtube {
+  background: #ff0000;
+  color: var(--text-white);
+}
+
+.btn--youtube:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+.btn--twitter {
+  background: #1da1f2;
+  color: var(--text-white);
+}
+
+.btn--twitter:hover {
+  background: #0d8bd9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .btn--lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+  }
+}

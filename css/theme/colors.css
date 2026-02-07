@@ -1,0 +1,69 @@
+/* ==========================================================================
+   カラーテーマ - Minecraftコミュニティ
+   ========================================================================== */
+
+:root {
+  /* Primary Colors - 緑テーマ */
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --light-green: #58d68d;
+  --accent-emerald: #16a085;
+  
+  /* Minecraft-inspired greens */
+  --grass-green: #7cbd3a;
+  --lime-green: #9cdb1c;
+  
+  /* Background Colors */
+  --bg-dark: #1a1a2e;
+  --bg-darker: #0f0f1e;
+  --bg-light: #f8f9fa;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.1);
+  
+  /* Text Colors */
+  --text-light: #ecf0f1;
+  --text-dark: #2c3e50;
+  --text-muted: #95a5a6;
+  --text-white: #ffffff;
+  
+  /* Accent Colors */
+  --accent-blue: #3498db;
+  --accent-yellow: #f39c12;
+  --accent-red: #e74c3c;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-emerald) 100%);
+  --gradient-dark: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(22, 160, 133, 0.2) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-green: 0 8px 20px rgba(46, 204, 113, 0.3);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Z-index */
+  --z-header: 1000;
+  --z-overlay: 900;
+  --z-modal: 1100;
+}

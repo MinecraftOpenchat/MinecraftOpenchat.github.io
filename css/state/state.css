@@ -1,0 +1,139 @@
+/* ==========================================================================
+   状態管理 - ホバー、アクティブ、フォーカスなど
+   ========================================================================== */
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.disabled,
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading state */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--primary-green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Active states */
+.is-active {
+  color: var(--primary-green) !important;
+}
+
+.is-open {
+  display: block !important;
+}
+
+.is-closed {
+  display: none !important;
+}
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-green);
+}
+
+/* Mobile menu state */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+.mobile-menu-open .nav {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Scroll states */
+.header.scrolled {
+  background: rgba(26, 26, 46, 0.98);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Error state */
+.error {
+  border-color: var(--accent-red) !important;
+}
+
+.error-message {
+  color: var(--accent-red);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Success state */
+.success {
+  border-color: var(--primary-green) !important;
+}
+
+.success-message {
+  color: var(--primary-green);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
