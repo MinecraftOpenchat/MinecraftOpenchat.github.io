@@ -26,7 +26,7 @@
         <div class="header__container">
             <a href="index.html" class="header__logo">
                 <div class="header__logo-icon">🎮</div>
-                <span>マイクラコミュニティ</span>
+                <span>Minecraft/マイクラ</span>
             </a>
             
             <nav class="nav">
@@ -55,63 +55,255 @@
                 <p class="section__subtitle">コミュニティを支える管理者チーム</p>
             </header>
             
-            <div class="section__content grid grid-4 scroll-reveal">
-                <!-- スタッフカード（サンプル） -->
+            <div class="section__content grid scroll-reveal" style="grid-template-columns: repeat(2, 1fr); gap: 3rem;">
+                <!-- オーナー -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">👑</div>
-                    <span class="card__role">オーナー</span>
-                    <h3 class="card__title">スタッフ1</h3>
-                    <p class="card__description">コミュニティの運営責任者</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Owner</span>
+                        <h3 class="card__title">オークの木がDaisuke (Shin)</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>👑</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                コミュニティの運営責任者です。皆さんが楽しく過ごせる場所を目指しています。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-star"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">サーバー運営</span>
+                                        <span class="card__tag">企画立案</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-hammer"></i> 主な活動</h4>
+                                    <p>全体の統括、新規プロジェクトの企画、外部との連携など。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
+                <!-- 管理者 -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">⭐</div>
-                    <span class="card__role">管理者</span>
-                    <h3 class="card__title">スタッフ2</h3>
-                    <p class="card__description">サーバー管理担当</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Admin</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>⭐</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                サーバーの全体管理を担当しています。不具合等あればお気軽にご相談ください。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-code"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">プラグイン開発</span>
+                                        <span class="card__tag">技術サポート</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-tools"></i> 主な活動</h4>
+                                    <p>サーバーの保守点検、新機能の導入、トラブルシューティング。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
+                <!-- モデレーター 1 -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">🛡️</div>
-                    <span class="card__role">モデレーター</span>
-                    <h3 class="card__title">スタッフ3</h3>
-                    <p class="card__description">コミュニティサポート</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Moderator</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>🛡️</span>
+                        </div>
+                        <div class="card__info">
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                コミュニティの平和を守っています。皆さんの交流をサポートします！
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-heart"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">トラブル解決</span>
+                                        <span class="card__tag">建築（和風）</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-shield-alt"></i> 主な活動</h4>
+                                    <p>チャットの監視、ルール違反への対応、新規参加者の案内。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
+                <!-- クリエイター -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">🎨</div>
-                    <span class="card__role">クリエイター</span>
-                    <h3 class="card__title">スタッフ4</h3>
-                    <p class="card__description">イベント企画担当</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Creator</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>🎨</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                イベントの景品やロゴ制作など、クリエイティブな面で活動しています。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-paint-brush"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">ドット絵</span>
+                                        <span class="card__tag">内装デザイン</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-magic"></i> 主な活動</h4>
+                                    <p>公式素材の制作、イベント会場の装飾、広報ビジュアル作成。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- 追加スタッフ用のプレースホルダー -->
+
+                <!-- モデレーター 2 -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">✨</div>
-                    <span class="card__role">モデレーター</span>
-                    <h3 class="card__title">スタッフ5</h3>
-                    <p class="card__description">コミュニティサポート</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Moderator</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>✨</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                困っている人がいたら放っておけません！何でも聞いてくださいね。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-hands-helping"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">初心者案内</span>
+                                        <span class="card__tag">サバイバル</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-info-circle"></i> 主な活動</h4>
+                                    <p>新規プレイヤーへの解説、オープンチャットでの会話促進担当。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+
+                <!-- イベントスタッフ -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">🎯</div>
-                    <span class="card__role">モデレーター</span>
-                    <h3 class="card__title">スタッフ6</h3>
-                    <p class="card__description">コミュニティサポート</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Event Staff</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>🎪</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                ワクワクするようなイベントを企画中！皆さんの参加をお待ちしています。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-fist-raised"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">ミニゲーム制作</span>
+                                        <span class="card__tag">実況</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-calendar-check"></i> 主な活動</h4>
+                                    <p>定期イベントの立案、当日の司会進行、ルール説明などを担当。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+
+                <!-- テクニカルスタッフ -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">🎪</div>
-                    <span class="card__role">イベントスタッフ</span>
-                    <h3 class="card__title">スタッフ7</h3>
-                    <p class="card__description">イベント運営</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Technical</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>🔧</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                サーバーの安定稼働とプラグインの調整を行っています。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-database"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">Linuxサーバー</span>
+                                        <span class="card__tag">最適化</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-microchip"></i> 主な活動</h4>
+                                    <p>インフラ管理、バックアップ、負荷対策など裏方作業全般。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+
+                <!-- デザイナー -->
                 <div class="card card--staff hover-lift">
-                    <div class="card__avatar">🔧</div>
-                    <span class="card__role">テクニカルスタッフ</span>
-                    <h3 class="card__title">スタッフ8</h3>
-                    <p class="card__description">技術サポート</p>
+                    <div class="card__header-top">
+                        <span class="card__role">Designer</span>
+                        <h3 class="card__title">スタッフ名</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__avatar">
+                            <span>👔</span>
+                        </div>
+                        <div class="card__main-info">
+                            <p class="card__comment">
+                                WebサイトやUIのデザインを通じて、コミュニティの魅力を伝えます。
+                            </p>
+                            <div class="card__content">
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-vector-square"></i> 得意なこと</h4>
+                                    <div class="card__tags">
+                                        <span class="card__tag">UI/UX design</span>
+                                        <span class="card__tag">CSS Animation</span>
+                                    </div>
+                                </div>
+                                <div class="card__detail-item">
+                                    <h4><i class="fas fa-pencil-ruler"></i> 主な活動</h4>
+                                    <p>公式サイトの更新、UI改善、デザインガイドラインの作成。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             

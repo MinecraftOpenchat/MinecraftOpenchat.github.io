@@ -68,41 +68,182 @@
 }
 
 /* Staff Card */
+/* Staff Card Enhanced */
+/* Staff Card - Profile Style (Large Horizontal) */
 .card--staff {
-  text-align: center;
-}
-
-.card--staff .card__avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: var(--radius-full);
-  margin: 0 auto 1rem;
-  border: 4px solid var(--primary-green);
-  overflow: hidden;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: var(--text-white);
-  font-weight: 800;
-}
-
-.card--staff .card__avatar img {
-  width: 100%;
+  text-align: left;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  gap: 2rem;
+}
+
+.card--staff:hover {
+  transform: translateY(-8px);
+  background: var(--bg-card-hover);
+  border-color: rgba(46, 204, 113, 0.5);
+  box-shadow: 0 30px 60px rgba(46, 204, 113, 0.15);
+}
+
+/* ヘッダー部分は名前と役割のみ */
+.card--staff .card__header-top {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
 }
 
 .card--staff .card__role {
   display: inline-block;
-  padding: 0.25rem 1rem;
-  background: rgba(46, 204, 113, 0.2);
-  border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  color: var(--primary-green);
+  padding: 0.5rem 2rem;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-white);
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+}
+
+.card--staff .card__title {
+  font-size: 2.25rem;
+  margin: 0;
+  color: var(--text-white);
+  font-weight: 900;
+}
+
+/* メインコンテンツ（横並び） */
+.card--staff .card__body {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.card--staff .card__avatar {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  border: 5px solid var(--primary-green);
+  overflow: hidden;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--text-white);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.card--staff:hover .card__avatar {
+  transform: scale(1.05);
+  border-color: var(--text-white);
+}
+
+.card--staff .card__main-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card--staff .card__comment {
+  font-size: 1.1rem;
+  color: var(--text-white);
+  line-height: 1.8;
+  padding: 1.5rem;
+  background: rgba(46, 204, 113, 0.08);
+  border-left: 4px solid var(--primary-green);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  margin: 0;
+}
+
+.card--staff .card__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.card--staff .card__detail-item h4 {
+  font-size: 0.9rem;
+  color: var(--primary-green);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .card--staff .card__body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card--staff .card__content {
+    grid-template-columns: 1fr;
+  }
+  .card--staff .card__comment {
+    border-left: none;
+    border-top: 4px solid var(--primary-green);
+    border-radius: var(--radius-md);
+  }
+}
+
+.card--staff .card__detail-item h4 {
+  font-size: 0.9rem;
+  color: var(--primary-green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card--staff .card__detail-item p,
+.card--staff .card__detail-item ul {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  list-style: none;
+  padding: 0;
+}
+
+.card--staff .card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card--staff .card__tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.75rem;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--primary-green);
+}
+
+@media (max-width: 1024px) {
+  .card--staff .card__header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .card--staff .card__title, .card--staff .card__role {
+    text-align: center;
+  }
+  .card--staff .card__content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Server Info Card */
