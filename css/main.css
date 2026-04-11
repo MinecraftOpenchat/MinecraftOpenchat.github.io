@@ -20,6 +20,7 @@
 @import url('modules/section.css');
 @import url('modules/card.css');
 @import url('modules/button.css');
+@import url('modules/gallery.css');
 
 /* State Layer */
 @import url('state/state.css');

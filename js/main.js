@@ -9,8 +9,7 @@ const elements = {
   header: document.querySelector('.header'),
   menuToggle: document.querySelector('.header__menu-toggle'),
   nav: document.querySelector('.nav'),
-  navLinks: document.querySelectorAll('.nav__link'),
-  scrollRevealElements: document.querySelectorAll('.scroll-reveal')
+  navLinks: document.querySelectorAll('.nav__link')
 };
 
 /**
@@ -18,16 +17,16 @@ const elements = {
  */
 function initScrollHeader() {
   let lastScroll = 0;
-  
+
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
       elements.header.classList.add('scrolled');
     } else {
       elements.header.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
   });
 }
@@ -38,14 +37,14 @@ function initScrollHeader() {
 function initActivePageHighlight() {
   const currentPath = window.location.pathname;
   const currentPage = currentPath.split('/').pop() || 'index.html';
-  
+
   elements.navLinks.forEach(link => {
     const linkPath = link.getAttribute('href');
-    
+
     // リンクが現在のページと一致する場合、activeクラスを追加
-    if (linkPath === currentPage || 
-        (currentPage === '' && linkPath === 'index.html') ||
-        (currentPage === '/' && linkPath === 'index.html')) {
+    if (linkPath === currentPage ||
+      (currentPage === '' && linkPath === 'index.html') ||
+      (currentPage === '/' && linkPath === 'index.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -61,7 +60,7 @@ function initMobileMenu() {
     elements.menuToggle.addEventListener('click', () => {
       elements.nav.classList.toggle('active');
       document.body.classList.toggle('mobile-menu-open');
-      
+
       // アイコンの変更（ハンバーガー ⇔ ×）
       const icon = elements.menuToggle.querySelector('i');
       if (icon) {
@@ -72,14 +71,14 @@ function initMobileMenu() {
         }
       }
     });
-    
+
     // ナビゲーションリンククリック時にモバイルメニューを閉じる
     elements.navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
           elements.nav.classList.remove('active');
           document.body.classList.remove('mobile-menu-open');
-          
+
           const icon = elements.menuToggle.querySelector('i');
           if (icon) {
             icon.className = 'fas fa-bars';
@@ -98,7 +97,7 @@ function initScrollReveal() {
     threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -107,8 +106,10 @@ function initScrollReveal() {
       }
     });
   }, observerOptions);
-  
-  elements.scrollRevealElements.forEach(element => {
+
+  const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+  scrollRevealElements.forEach(element => {
     observer.observe(element);
   });
 }
@@ -118,20 +119,20 @@ function initScrollReveal() {
  */
 function initCopyButtons() {
   const copyButtons = document.querySelectorAll('.card__copy-btn');
-  
+
   copyButtons.forEach(button => {
-    button.addEventListener('click', async function() {
+    button.addEventListener('click', async function () {
       const addressText = this.parentElement.querySelector('.card__address-text');
-      
+
       if (addressText) {
         try {
           await navigator.clipboard.writeText(addressText.textContent);
-          
+
           // ボタンのテキストを一時的に変更
           const originalText = this.textContent;
           this.textContent = 'コピーしました！';
           this.style.background = 'var(--accent-emerald)';
-          
+
           setTimeout(() => {
             this.textContent = originalText;
             this.style.background = '';
@@ -150,7 +151,7 @@ function initCopyButtons() {
  */
 function initPageLoadAnimation() {
   document.body.style.opacity = '0';
-  
+
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.body.style.transition = 'opacity 0.5s ease';
@@ -169,7 +170,7 @@ function init() {
   initScrollReveal();
   initCopyButtons();
   initPageLoadAnimation();
-  
+
   console.log('🎮 マインクラフトコミュニティサイトが読み込まれました！');
 }
 

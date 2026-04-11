@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="マインクラフトコミュニティの活動風景やスクリーンショットを紹介するギャラリーページです。">
+    <title>ギャラリー - Minecraft/マイクラ(オープンチャット/Discord)</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modules/gallery.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- ============================================
+         ヘッダー & ナビゲーション
+         ============================================ -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <div class="header__logo-icon">🎮</div>
+                <span>Minecraft/マイクラ</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="events.html" class="nav__link">イベント</a></li>
+                    <li class="nav__item"><a href="rules.html" class="nav__link">ルール</a></li>
+                    <li class="nav__item"><a href="join.html" class="nav__link">参加方法</a></li>
+                    <li class="nav__item"><a href="server.html" class="nav__link">サーバー</a></li>
+                    <li class="nav__item"><a href="staff.html" class="nav__link">スタッフ</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link active">ギャラリー</a></li>
+                    <li class="nav__item"><a href="sns.html" class="nav__link">SNS</a></li>
+                </ul>
+            </nav>
+
+            <button class="header__menu-toggle" aria-label="メニューを開く">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================
+             ページヘッダー
+             ============================================ -->
+        <section class="section section--dark" style="padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="section__container">
+                <header class="section__header scroll-reveal">
+                    <h1 class="section__title">ギャラリー</h1>
+                    <p class="section__subtitle">コミュニティメンバーとの活動や、サーバー内の素敵な景色をご紹介します</p>
+                </header>
+            </div>
+        </section>
+
+        <!-- ============================================
+             ギャラリーグリッド
+             ============================================ -->
+        <section class="gallery section">
+            <div class="section__container">
+                <div class="gallery__grid" id="gallery-grid">
+                    <!-- JSで画像が挿入されます -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- モーダル表示用 -->
+    <div class="modal" id="gallery-modal">
+        <span class="modal__close">&times;</span>
+        <img src="" alt="拡大画像" class="modal__content" id="modal-img">
+    </div>
+
+    <!-- ============================================
+         フッター
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Minecraft/マイクラコミュニティ</h3>
+                    <p>マインクラフトの雑談を楽しむコミュニティ。<br>オープンチャット・Discord・サーバー運営で一緒に遊ぼう！</p>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">リンク</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="events.html">イベント</a></li>
+                        <li><a href="rules.html">ルール</a></li>
+                        <li><a href="join.html">参加方法</a></li>
+                        <li><a href="server.html">サーバー情報</a></li>
+                        <li><a href="staff.html">スタッフ</a></li>
+                        <li><a href="gallery.html">ギャラリー</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">SNS</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://www.youtube.com/@MinecraftLineOC" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://x.com/oc_minecraft" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-twitter"></i> Twitter (X)</a></li>
+                        <li><a href="https://discord.gg/5mbHeUBGKd" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://line.me/ti/g2/CJW2WW2DHXDSdOmx6ecle5YqvH-nFljGru4J6g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-line"></i> オープンチャット</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2026 Minecraft/マイクラ(オープンチャット/Discord). All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/gallery-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (() => {
+            console.log('Gallery: Script started');
+            const galleryGrid = document.getElementById('gallery-grid');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.querySelector('.modal__close');
+
+            if (!galleryGrid) {
+                console.error('Gallery: gallery-grid element not found');
+                return;
+            }
+
+            // js/gallery-data.js のデータを使用
+            const images = typeof GALLERY_DATA !== 'undefined' ? GALLERY_DATA : [];
+            const dir = './images/gallery/';
+
+            console.log(`Gallery: Generating ${images.length} items`);
+
+            // ギャラリーアイテムの生成
+            images.forEach(data => {
+                const item = document.createElement('div');
+                item.className = 'gallery__item';
+
+                const imgPath = dir + data.file;
+                item.innerHTML = `
+                    <img src="${imgPath}" alt="Minecraft Screenshot" class="gallery__image" loading="lazy">
+                    <div class="gallery__overlay">
+                        <div class="gallery__info">
+                            <i class="fas fa-search-plus gallery__icon"></i>
+                            <span class="gallery__owner"><i class="fas fa-user"></i> ${data.owner}</span>
+                        </div>
+                    </div>
+                `;
+
+                item.addEventListener('click', () => {
+                    modalImg.src = imgPath;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                galleryGrid.appendChild(item);
+            });
+
+            console.log('Gallery: Items added to grid');
+
+            // モーダルを閉じる
+            const closeModal = () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (modal) modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+    </script>
+</body>
+
+</html>
